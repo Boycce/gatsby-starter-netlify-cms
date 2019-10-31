@@ -1,4 +1,5 @@
 import React from 'react'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import styled from 'styled-components'
 import {Container, Row, Col, UncontrolledTooltip} from 'reactstrap'
 import {Link} from 'gatsby'
@@ -23,15 +24,15 @@ function Footer() {
                 </div>
               </Col>
               <Col xs={4}>
-                <Link to="/about" className="text-dark">
+                <AniLink fade to="/about" className="text-dark">
                   <p className="mb-1">About</p>
-                </Link>
-                <Link to="/how-it-works" className="text-dark">
+                </AniLink>
+                <AniLink fade to="/how-it-works" className="text-dark">
                   <p className="mb-1">How it works</p>
-                </Link>
-                <Link to="/prices" className="text-dark">
+                </AniLink>
+                <AniLink fade to="/prices" className="text-dark">
                   <p className="mb-1">Prices</p>
-                </Link>
+                </AniLink>
                 <a href="https://www.snowballsecurities.com/download" className="text-dark">
                   <p className="mb-1">Downloads</p>
                 </a>
@@ -39,12 +40,12 @@ function Footer() {
               <Col xs={4}>
                 <p className="mb-1">Blog</p>
                 <p className="mb-1">Risk Disclosure</p>
-                <Link to="/faq" className="text-dark">
+                <AniLink fade to="/faq" className="text-dark">
                   <p className="mb-1">FAQs</p>
-                </Link>
-                <Link to="/contact" className="text-dark">
+                </AniLink>
+                <AniLink fade to="/contact" className="text-dark">
                   <p className="mb-1">Contact</p>
-                </Link>
+                </AniLink>
               </Col>
             </Row>
           </Col>

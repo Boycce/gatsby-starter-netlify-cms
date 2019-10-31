@@ -1,6 +1,7 @@
 // @flow
 
 import React, {useEffect} from 'react'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import styled from 'styled-components'
 import {Row, Col, Container} from 'reactstrap'
 import PropTypes from 'prop-types'
@@ -292,11 +293,11 @@ export const IndexPageTemplate = ({
                     <h1 className="text-primary display-2 mb-3">{featureSection.mainText}</h1>
                     <h5 className="mb-2">{featureSection.subText}</h5>
                     <p>{featureSection.description}</p>
-                    <Link to="/how-it-works">
+                    <AniLink fade to="/how-it-works">
                       <button className="btn btn-outline-primary rounded-pill" type="button">
                         {featureSection.buttonText}
                       </button>
-                    </Link>
+                    </AniLink>
                   </Fade>
                 </Scene>
               </Controller>
@@ -331,11 +332,11 @@ export const IndexPageTemplate = ({
                 <Fade bottom>
                   <h1 className="text-primary display-2 mb-3">{realTimeStockSection.mainText}</h1>
                   <p>{realTimeStockSection.description}</p>
-                  <Link to="/price">
+                  <AniLink fade to="/price">
                     <button className="btn btn-outline-primary rounded-pill" type="button">
                       {realTimeStockSection.buttonText}
                     </button>
-                  </Link>
+                  </AniLink>
                 </Fade>
               </Col>
               <Col md={6} lg={6} className="mr-auto">

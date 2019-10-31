@@ -233,3 +233,7 @@ video {
   outline: none !important;
   box-shadow: none !important;
 }
+.tl-edges {
+  /* Remove vertical scrollbar from adding page transitions */
+  overflow: hidden;
+}

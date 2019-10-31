@@ -1,4 +1,5 @@
 import React from 'react'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import styled from 'styled-components'
 import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav} from 'reactstrap'
 import {Link} from 'gatsby'
@@ -71,28 +72,28 @@ export default class Header extends React.Component {
         <StyledNavbar isOpen={isOpen} scrolled={scrolled} light expand="md" className="fixed-top">
           <div className="container">
             <NavbarBrand>
-              <Link to="/">
+              <AniLink fade to="/">
                 <Logo
                   isOpen={isOpen}
                   scrolled={scrolled}
                   src={this.props.white ? whiteLogo : logo}
                   alt="company logo"
                 />
-              </Link>
+              </AniLink>
             </NavbarBrand>
             <StyledNavbarToggler isOpen={this.state.isOpen} onClick={this.toggle} />
             <StyledCollapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 {data.map(link =>
                   link.href !== '' ? (
-                    <Link
+                    <AniLink fade
                       to={link.href}
                       className={`nav-link ${
                         `/${this.state.currentPath}` === `${link.href}` ? 'custom-active' : ''
                       }`}
                     >
                       {link.name}
-                    </Link>
+                    </AniLink>
                   ) : (
                     <a href="https://www.snowballsecurities.com/download" className="nav-link">
                       {link.name}
@@ -106,18 +107,18 @@ export default class Header extends React.Component {
         <ScrolledNavbar isOpen={isOpen} scrolled={scrolled} light expand="md" className="fixed-top">
           <div className="container">
             <NavbarBrand>
-              <Link to="/">
+              <AniLink fade to="/">
                 <LogoIcon isOpen={isOpen} scrolled={scrolled} src={logoIcon} alt="company logo" />
-              </Link>
+              </AniLink>
             </NavbarBrand>
             <StyledNavbarToggler isOpen={this.state.isOpen} onClick={this.toggle} />
             <StyledCollapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 {data.map(link =>
                   link.href !== '' ? (
-                    <Link to={link.href} className="nav-link">
+                    <AniLink fade to={link.href} className="nav-link">
                       {link.name}
-                    </Link>
+                    </AniLink>
                   ) : (
                     <a href="https://www.snowballsecurities.com/download" className="nav-link">
                       {link.name}

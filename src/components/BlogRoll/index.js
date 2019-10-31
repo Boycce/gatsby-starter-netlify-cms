@@ -1,5 +1,6 @@
 // @flow
 import React, {useState, useEffect, useRef} from 'react'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import PropTypes from 'prop-types'
 import {Link} from 'gatsby'
 import styled from 'styled-components'
@@ -146,7 +147,7 @@ class BlogRoll extends React.Component {
                       {description}
                     </small>
                     <div className="mt-5">
-                      <Link to={'/how-it-works' || post.fields.slug}>
+                      <AniLink fade to={'/how-it-works' || post.fields.slug}>
                         <StyledButton
                           className={`btn btn-outline-primary rounded-pill button-hover ${
                             !this.state.isHovering && this.state.currentNdx === ndx
@@ -158,7 +159,7 @@ class BlogRoll extends React.Component {
                         >
                           Get Started
                         </StyledButton>
-                      </Link>
+                      </AniLink>
                     </div>
                   </div>
                   <div className="mt-5">
